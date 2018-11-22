@@ -16,4 +16,9 @@ public class MyController {
         return "This is my branch";
     }
 
+    @RequestMapping("/myPr")
+    public String myPr() {
+        return "This is my Pr";
+    }
+
 }
