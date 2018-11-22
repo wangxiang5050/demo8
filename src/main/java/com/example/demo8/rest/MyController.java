@@ -11,4 +11,9 @@ public class MyController {
         return "Hello World!";
     }
 
+    @RequestMapping("/myBranch")
+    public String myBranch() {
+        return "This is my branch";
+    }
+
 }
