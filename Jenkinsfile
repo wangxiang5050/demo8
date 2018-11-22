@@ -29,6 +29,7 @@ pipeline {
 
           dir ('./charts/preview') {
            container('maven') {
+             sh 'helm init --client-only --upgrade -i registry.cn-hangzhou.aliyuncs.com/google_containers/tiller:v2.10.0-rc.1 --stable-repo-url https://kubernetes.oss-cn-hangzhou.aliyuncs.com/charts'
              sh "make preview"
              sh "jx preview --app $APP_NAME --dir ../.."
            }
